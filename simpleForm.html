@@ -57,6 +57,16 @@
             else
                 emailError.textContent="Email is Invalid";    
             })
+
+        const tel=document.querySelector('#tel');
+        const telError=document.querySelector('.tel-error');
+        tel.addEventListener('input', function(){
+            let telRegex =new RegExp(/^[1-9]{2}([ ])+([6-9]){1}([0-9]){9}/)
+            if(telRegex.test(tel.value))
+                telError.textContent="";
+            else
+                telError.textContent="Number is Invalid";
+            })
     </script>     
 </body>
 </html>
